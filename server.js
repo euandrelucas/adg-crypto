@@ -129,7 +129,7 @@ fastify.register(require('@fastify/static'), {
 // Iniciar o servidor Fastify
 const start = async () => {
   try {
-    await fastify.listen({ port: 3000 });
+    await fastify.listen({ port: 8080, host: "0.0.0.0" });
     console.log('Servidor rodando na porta 3000');
   } catch (err) {
     fastify.log.error(err);
