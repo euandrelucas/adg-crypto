@@ -18,13 +18,14 @@ Uma versão de demonstração do código pode ser encontrada em [crypto.andrepai
    ```bash
    git clone https://github.com/seu-usuario/adg-crypto.git
    cd adg-crypto
-```
+   ```
 
 2. **Instale as dependências**:
 
    ```bash
    npm install
    ```
+
 3. **Execute o servidor**:
 
    ```bash
@@ -92,4 +93,3 @@ Este projeto está licenciado sob a Licença ISC. Veja o arquivo [LICENSE](LICEN
 ## Nota
 
 O arquivo `crypto.js` está incluído no `.gitignore`, portanto não estará presente no repositório. As funções de criptografia podem ser vistas na versão de demonstração no link fornecido acima.
-
