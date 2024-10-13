@@ -1,0 +1,29 @@
+{
+  "name": "adg-crypto",
+  "version": "1.0.0",
+  "description": "API para criptografia e descriptografia de texto e arquivos usando um algoritmo autoral.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [
+    "cryptography",
+    "encryption",
+    "decryption",
+    "files",
+    "text",
+    "API",
+    "fastify",
+    "custom-algorithm",
+    "adg"
+  ],
+  "author": "euandrelucas",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/multipart": "^9.0.1",
+    "@fastify/static": "^8.0.1",
+    "fastify": "^5.0.0",
+    "fastify-multipart": "^5.4.0",
+    "fastify-static": "^4.7.0"
+  }
+}
