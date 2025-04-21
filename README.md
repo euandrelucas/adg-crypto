@@ -1,95 +1,129 @@
-# ADG Crypto
+<h1 align="center">🔐 ADG Crypto</h1>
 
-ADG Crypto é uma API de criptografia autoral que permite criptografar e descriptografar textos e arquivos. O projeto foi desenvolvido utilizando Node.js e Fastify, oferecendo um desempenho eficiente e uma interface fácil de usar.
+<p align="center">
+  Uma API de criptografia autoral construída com Node.js + Fastify, simples de usar e pronta para produção.
+</p>
 
-## Funcionalidades
+<p align="center">
+  <a href="https://github.com/euandrelucas/adg-crypto"><img src="https://img.shields.io/badge/github-euandrelucas/adg--crypto-8b5cf6?style=for-the-badge&logo=github"></a>
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/feito%20com-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"></a>
+  <a href="https://www.fastify.io/"><img src="https://img.shields.io/badge/server-Fastify-black?style=for-the-badge&logo=fastify&logoColor=white"></a>
+  <a href="https://crypto.andrepaiva.dev"><img src="https://img.shields.io/badge/demo-online-blueviolet?style=for-the-badge"></a>
+</p>
 
-- Criptografia e descriptografia de textos via endpoints HTTP.
-- Criptografia e descriptografia de arquivos.
-- Documentação simples acessível através da rota `/`.
+---
 
-## Demonstração
+## 📌 Sobre
 
-Uma versão de demonstração do código pode ser encontrada em [crypto.andrepaiva.dev](http://crypto.andrepaiva.dev).
+**ADG Crypto** é uma API HTTP para criptografia de **textos** e **arquivos**, construída com foco em performance e simplicidade.
 
-## Instalação
+Ela oferece endpoints rápidos e seguros para operações de criptografia e descriptografia, sendo ideal para aplicações que lidam com dados sensíveis.
 
-1. **Clone o repositório**:
-   ```bash
-   git clone https://github.com/seu-usuario/adg-crypto.git
-   cd adg-crypto
-   ```
+---
 
-2. **Instale as dependências**:
+## 🚀 Começando
 
-   ```bash
-   npm install
-   ```
+### Clonar o projeto
+```bash
+git clone https://github.com/euandrelucas/adg-crypto.git
+cd adg-crypto
+```
 
-3. **Execute o servidor**:
+### Instalar dependências
+```bash
+npm install
+```
 
-   ```bash
-   npm start
-   ```
-4. O servidor estará disponível em `http://localhost:3000`.
+### Executar o servidor
+```bash
+npm start
+```
 
-## Uso
+> O servidor estará disponível em: [http://localhost:3000](http://localhost:3000)
 
-### Endpoints
+---
 
-- **Criptografar texto**:
+## 📡 Endpoints
 
-  - **POST** `/encrypt`
+### 🔸 Criptografar texto
 
-    - **Corpo**: `{"text": "SEU_TEXTO"}`
-    - **Exemplo de requisição**:
-      ```bash
-      curl -X POST http://localhost:3000/encrypt -H "Content-Type: application/json" -d '{"text": "DreamTeam"}'
-      ```
-  - **GET** `/encrypt?text=SEU_TEXTO`
+**POST** `/encrypt`
 
-    - **Exemplo de requisição**:
-      ```bash
-      curl -X GET "http://localhost:3000/encrypt?text=DreamTeam"
-      ```
-- **Descriptografar texto**:
+```json
+{ "text": "DreamTeam" }
+```
 
-  - **POST** `/decrypt`
+```bash
+curl -X POST http://localhost:3000/encrypt \
+     -H "Content-Type: application/json" \
+     -d '{"text": "DreamTeam"}'
+```
 
-    - **Corpo**: `{"encryptedText": "TEXTO_CRIPTOGRAFADO"}`
-    - **Exemplo de requisição**:
-      ```bash
-      curl -X POST http://localhost:3000/decrypt -H "Content-Type: application/json" -d '{"encryptedText": "TEXTO_CRIPTOGRAFADO"}'
-      ```
-  - **GET** `/decrypt?encryptedText=TEXTO_CRIPTOGRAFADO`
+**GET** `/encrypt?text=DreamTeam`
 
-    - **Exemplo de requisição**:
-      ```bash
-      curl -X GET "http://localhost:3000/decrypt?encryptedText=TEXTO_CRIPTOGRAFADO"
-      ```
-- **Criptografar arquivo**:
+---
 
-  - **POST** `/encrypt-file`
-    - Faça o upload do arquivo.
-    - O arquivo criptografado será retornado.
-- **Descriptografar arquivo**:
+### 🔸 Descriptografar texto
 
-  - **POST** `/decrypt-file`
-    - Faça o upload do arquivo criptografado.
-    - O arquivo descriptografado será retornado.
+**POST** `/decrypt`
 
-### Documentação
+```json
+{ "encryptedText": "TEXTO_CRIPTOGRAFADO" }
+```
 
-Acesse a documentação simples da API através do navegador em `http://localhost:3000/`.
+```bash
+curl -X POST http://localhost:3000/decrypt \
+     -H "Content-Type: application/json" \
+     -d '{"encryptedText": "TEXTO_CRIPTOGRAFADO"}'
+```
 
-## Contribuição
+**GET** `/decrypt?encryptedText=TEXTO_CRIPTOGRAFADO`
 
-Sinta-se à vontade para contribuir com o projeto. Abra uma issue ou envie um pull request!
+---
 
-## Licença
+### 🔸 Criptografar arquivo
 
-Este projeto está licenciado sob a Licença ISC. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+**POST** `/encrypt-file`  
+Envie um arquivo via `multipart/form-data`. O arquivo criptografado será retornado.
 
-## Nota
+---
 
-O arquivo `crypto.js` está incluído no `.gitignore`, portanto não estará presente no repositório. As funções de criptografia podem ser vistas na versão de demonstração no link fornecido acima.
+### 🔸 Descriptografar arquivo
+
+**POST** `/decrypt-file`  
+Envie um arquivo criptografado via `multipart/form-data`. O arquivo original será retornado.
+
+---
+
+## 📚 Documentação
+
+Acesse diretamente no navegador:  
+📄 [http://localhost:3000](http://localhost:3000)
+
+---
+
+## ⚠️ Nota
+
+O arquivo `crypto.js` foi adicionado ao `.gitignore` por conter as funções internas de criptografia.  
+Ele está disponível apenas na instância de demonstração:  
+🔗 [https://crypto.andrepaiva.dev](https://crypto.andrepaiva.dev)
+
+---
+
+## 🤝 Contribuições
+
+Contribuições são bem-vindas!  
+Abra uma issue ou envie um pull request com melhorias ou novas ideias.
+
+---
+
+## 🪪 Licença
+
+Distribuído sob a licença ISC.  
+Veja o arquivo [`LICENSE`](./LICENSE) para mais detalhes.
+
+---
+
+## 🧑‍💻 Autor
+
+Desenvolvido com 💙 por [André Lucas](https://github.com/euandrelucas)
